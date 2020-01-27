@@ -149,22 +149,31 @@
 # end
 
 # "fdsyffdsyffdsyffdsyffdsyf"
-def dig_pow(n,p)
-  p -= 1
-  array = n.to_s.split("").map do |num|
-    num.to_i
-  end
-  array.inject {|result,s| result + s**(p += 1) }
-  if array % n == 0
-    array / n
-  else
-    -1
-  end
-end
+# def dig_pow(n,p)
+#   p -= 1
+#   array = n.to_s.split("").map do |num|
+#     num.to_i
+#   end
+#   array.inject {|result,s| result + s**(p += 1) }
+#   if array % n == 0
+#     array / n
+#   else
+#     -1
+#   end
+# end
 # def dig_pow(n, p)
 #   numbers = n.to_s.split("").map(&:to_i)
 #   numbers.inject{|result,s| result + s}
 # end
-p dig_pow(89, 1)
-p dig_pow(92, 1)
-p dig_pow(46288, 3)
+# p dig_pow(89, 1)
+# p dig_pow(92, 1)
+# p dig_pow(46288, 3)
+def solution(number)
+  hash = {"1": "I","5": "V","10": "X","50": "L", "100": "C", "500": "D", "1000": "M",
+  "4": "IV","9": "IX","40": "VX","90": "VL", "400": "CD", "900": "CM"}
+  array = number.map do |n|
+    n.split("")
+  end
+  hash[:"#{array.to_s}"]
+end
+p solution(600)

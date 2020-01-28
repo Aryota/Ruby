@@ -168,12 +168,25 @@
 # p dig_pow(89, 1)
 # p dig_pow(92, 1)
 # p dig_pow(46288, 3)
-def solution(number)
-  hash = {"1": "I","5": "V","10": "X","50": "L", "100": "C", "500": "D", "1000": "M",
-  "4": "IV","9": "IX","40": "VX","90": "VL", "400": "CD", "900": "CM"}
-  array = number.map do |n|
-    n.split("")
-  end
-  hash[:"#{array.to_s}"]
-end
-p solution(600)
+# def solution(number)
+#   hash = {"1": "I","5": "V","10": "X","50": "L", "100": "C", "500": "D", "1000": "M",
+#   "4": "IV","9": "IX","40": "VX","90": "VL", "400": "CD", "900": "CM"}
+#    array = number.to_s.split("").map(&:to_i)
+#    array. do |n|
+#     hash[:"#{n.to_s}"]
+#    end
+# end
+# p solution(500)
+
+# def add (a,b)
+#   a + b
+# end
+
+# add(1,2)
+
+# user = {name: "yuya",age: "26",country: "japan"}
+# user[:sex] = "man"
+# user.delete(:sex)
+
+# p user.has_key?(:name)
+relation.includes([:scenario_delivery, { filter: %i[tag_filters quick_filters] }, { messages: [{ quick_reply: :quick_reply_choices },{ button_template: { button_items: [:button] } },{ list_template: [list_items: :article] },{ generic_template: {generic_items: { generic_item_buttons: :button }} },:medium] }]).explain

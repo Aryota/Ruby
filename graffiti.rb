@@ -172,8 +172,12 @@
 #   hash = {"1": "I","5": "V","10": "X","50": "L", "100": "C", "500": "D", "1000": "M",
 #   "4": "IV","9": "IX","40": "VX","90": "VL", "400": "CD", "900": "CM"}
 #    array = number.to_s.split("").map(&:to_i)
-#    array. do |n|
-#     hash[:"#{n.to_s}"]
+#    a = []
+#    while a.size < "#{array}" do a << 1 end
+#    a
+
+#    array.map do |n|
+#     hash[:"#{(n.to_s}"]
 #    end
 # end
 # p solution(500)
@@ -189,4 +193,121 @@
 # user.delete(:sex)
 
 # p user.has_key?(:name)
-relation.includes([:scenario_delivery, { filter: %i[tag_filters quick_filters] }, { messages: [{ quick_reply: :quick_reply_choices },{ button_template: { button_items: [:button] } },{ list_template: [list_items: :article] },{ generic_template: {generic_items: { generic_item_buttons: :button }} },:medium] }]).explain
+# relation.includes([:scenario_delivery, { filter: %i[tag_filters quick_filters] }, { messages: [{ quick_reply: :quick_reply_choices },{ button_template: { button_items: [:button] } },{ list_template: [list_items: :article] },{ generic_template: {generic_items: { generic_item_buttons: :button }} },:medium] }]).explain
+
+# def century(year)
+#   a = year*1/100.to_f
+#   a.ceil
+
+# end
+# p century(1777)
+
+# def solution(str)
+#   array = str.split("").reverse.join
+
+# end
+# p solution('world')
+
+# def XO(str)
+#   s = str.downcase
+#   s.count('x') == s.count('o')
+  
+
+# end
+# p XO('Ooxx')
+
+# def digital_root(n)
+#   return num if num < 10
+#   output = num % 10 + digital_root(num / 10)
+#   output >= 10 ? digital_root(output) : output
+# end
+# p digital_root(456)
+
+# require "pry-rails"
+
+# class User
+#   attr_accessor :name, :age
+
+#   def initialize(name, age, from)
+#     @name = name
+#     @age = age
+#     @from = from
+#   end
+
+#   def name
+#     @name
+#   end
+
+#   def name=(value)
+#     @name = value
+#   end
+
+#   def age
+#     @age
+#   end
+
+#   def age=(value)
+#     @age = value
+#   end
+
+# end
+
+# user = User.new("Alice", 23, "usa")
+# user.name = "bob"
+# p user.name
+
+# (1..10).group_by {|i| i%3 } 
+# def solution(number)
+#   num = (1...number).select do |s|
+#     s % 3 ==0 || s % 5 ==0
+#   end
+#   num.inject(:+)
+# end
+# def solution(number)
+#   (1...number).select {|i| i%3==0 || i%5==0}.inject(:+)
+# end
+
+# p solution(10)
+
+# require 'rails_helper'
+
+# describe MessageQuery, type: :query do
+#   describe '#no_event_log_for_two_month' do
+#   end
+# end
+# def solution(roman)
+
+#   roman.split("").map do |n|
+#     {"I": 1}
+#     {"V": 5}
+#     {"X": 10}
+#     {"L": 50}
+#     # "C" = 100
+#     # "D" = 500
+#     # "M" = 1,000
+#     # n.
+#   end
+# end
+
+# p solution('XXI')
+
+# def add(c)
+#   # "a" = 1
+#   "#{a} =1"
+#   c
+# end
+
+# p add(["a","b"])
+# def remove_every_other(arr)
+#   num =(0...arr.count).select(&:even?)
+#   num.map do |n|
+#     arr[n]
+#   end
+# end
+
+# p remove_every_other(['Hello', 'Goodbye', 'Hello Again'])
+
+def validate_usr(username)
+  4 <= username.gsub(" ", "").length == username.gsub(" ", "").length <= 16 && username.gsub(" ", "").length == username.length
+end
+p validate_usr('aaaaaaa ')

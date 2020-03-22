@@ -307,7 +307,14 @@
 
 # p remove_every_other(['Hello', 'Goodbye', 'Hello Again'])
 
-def validate_usr(username)
-  4 <= username.gsub(" ", "").length == username.gsub(" ", "").length <= 16 && username.gsub(" ", "").length == username.length
+# def validate_usr(username)
+#   4 <= username.gsub(" ", "").length == username.gsub(" ", "").length <= 16 && username.gsub(" ", "").length == username.length
+# end
+# p validate_usr('aaaaaaa ')
+
+def prime_string(s)
+  a = s.split("").count
+  
 end
-p validate_usr('aaaaaaa ')
+
+p prime_string("fdsyffdsyffdsyffdsyffdsyf")

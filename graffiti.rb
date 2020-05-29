@@ -88,7 +88,7 @@
 #     return "B"
 #   elsif sum >= 500*0.4
 #     return "C"
-#   else 
+#   else
 #     return "D"
 #   end
 # end
@@ -144,7 +144,7 @@
 #     p += 1
 #   end
 #   remainder = sum % n
-#   quotient = sum / n 
+#   quotient = sum / n
 #   return remainder.zero? ? quotient :  -1
 # end
 
@@ -211,7 +211,6 @@
 # def XO(str)
 #   s = str.downcase
 #   s.count('x') == s.count('o')
-  
 
 # end
 # p XO('Ooxx')
@@ -256,7 +255,7 @@
 # user.name = "bob"
 # p user.name
 
-# (1..10).group_by {|i| i%3 } 
+# (1..10).group_by {|i| i%3 }
 # def solution(number)
 #   num = (1...number).select do |s|
 #     s % 3 ==0 || s % 5 ==0
@@ -312,9 +311,20 @@
 # end
 # p validate_usr('aaaaaaa ')
 
-def prime_string(s)
-  a = s.split("").count
-  
-end
+# def prime_string(s)
+#   a = s.split("").count
+# end
 
-p prime_string("fdsyffdsyffdsyffdsyffdsyf")
+# p prime_string("fdsyffdsyffdsyffdsyffdsyf")
+
+# def find_missing(sequence)
+#   sequence.to_s.spplit(",")
+# end
+
+# p find_missing(1)
+
+# def solution(str)
+#   str.delete("aiueoAOIUEO")
+# end
+
+# p solution('abcdef')
